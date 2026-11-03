@@ -1,0 +1,123 @@
+.header{
+	width: 100%;
+    /* background: #fff;
+    box-shadow: 2px 5px 5px #ccc; */
+    border-radius: 5px;
+    padding: 15px 35px;
+    min-height: 42px;
+	display: flex;
+    justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.dropdown__text{
+	box-shadow: 5px 10px 20px #ccc;
+    padding: 10px 20px;
+    text-align: right;
+    border-radius: 15px;
+	cursor: pointer;
+}
+
+#checked_dropdown{
+	position: absolute;
+	opacity: 0;
+}
+
+#checked_dropdown ~ .dropdown__items{
+	transition: all 0.5 ease-in-out;
+}
+
+#checked_dropdown:checked ~ .dropdown__items{
+	display:block;
+	list-style: none;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 5px 10px 20px #ccc;
+	transition: all 1s ease;
+	margin-top:60px !important;
+	top: 0px;
+	opacity: 1;
+	width:100%;
+	min-width: 160px;
+	transition: all 0.5s linear;
+	position: absolute;
+    z-index: 4;
+}
+
+#checked_dropdown:checked ~ .dropdown__items > li {
+	width: 100%;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    align-content: baseline;
+    font-size: 14px;
+    gap: 7px;
+}
+
+#checked_dropdown:not(:checked) ~ .dropdown__items > li{
+	width: 100%;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    align-content: baseline;
+    font-size: 14px;
+    gap: 7px;
+}
+
+.dropdown__items > li:hover{
+	color: #fff;
+	background-color: #0e58a2;
+}
+
+#checked_dropdown ~ .dropdown__items > li:hover:nth-child(1){
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#checked_dropdown ~ .dropdown__items > li:nth-child(1){
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#checked_dropdown ~ .dropdown__items > li:hover:last-child{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#checked_dropdown ~ .dropdown__items > li:last-child{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.dropdown__items > li{
+	width: 100%;
+	padding:10px 20px;
+	transition: all 0.5s ease;
+}
+
+.dropdown__items{
+	position: absolute;
+	transition: all 0.5s ease;
+	opacity: 0;
+	padding-left: 0px;
+}
+
+.dropdown__arrow{
+	display: none;
+}
+
+.dropdown{
+	position: relative;
+}
+
+li.divider-menu {
+    padding: 0px !important;
+    height: 2px;
+    background: #ececec;
+}

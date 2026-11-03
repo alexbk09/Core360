@@ -1,0 +1,26 @@
+.input-typification{
+	max-width: 500px;
+}
+
+.typification{
+	border-right: 0;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.child-typification{
+	border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+
+.btn-group-typification{
+	border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 6px 22px;
+	border: 1px solid #ccc;
+}

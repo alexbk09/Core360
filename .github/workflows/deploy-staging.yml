@@ -1,0 +1,32 @@
+name: "Deploy Staging to Frontend"
+on:
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - staging
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.15.0'
+      - name: Install npm dependencies
+        run: npm install
+      - name: Build
+        run: npm run production
+      - name: Deploy-SSH
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_STAGING }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER_STAGING }}
+          TARGET: ${{ secrets.REMOTE_TARGET_STAGING }}
+          EXCLUDE: "/dist/, /node_modules/"

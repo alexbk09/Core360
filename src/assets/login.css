@@ -1,0 +1,26 @@
+@import url(./css/global.css);
+
+.padding-form{
+	padding: 30px;
+	margin-top: 30%;
+}
+
+.content-full-hight{
+	height:100vh;
+}
+
+.background-left{
+	background-color:var(--primary);
+	display: flex;
+    align-items: center;
+	color:white
+}
+
+.bg-classic{
+	background-color: var(--secondary);
+	color: #fff;
+}
+
+.content-padding{
+	padding:20px;
+}

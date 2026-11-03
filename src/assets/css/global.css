@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Aytec Font';
+    src: url("../fonts/eras_bold.ttf");
+  }
+
+:root{
+    --primary:#1976D2;
+    --secondary:#263238;
+}

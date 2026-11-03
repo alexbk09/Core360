@@ -1,0 +1,5 @@
+.input-action {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}

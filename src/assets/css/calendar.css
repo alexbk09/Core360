@@ -1,0 +1,38 @@
+.container-calendar{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.container-calendar > .card{
+	width: 100%;
+	flex:100%;
+	transition: all 0.5s ease;
+}
+
+.container-calendar > .card.active{
+	flex:70%;
+}
+
+.deploy-info{
+	display:none;
+	transition: all 0.5s ease;
+}
+
+.deploy-info.active{
+	display:block;
+	height:100vh;
+	width:300px;
+	flex:30%;
+	background:white;
+}
+
+.space-between{
+	justify-content: space-between;
+}
+
+.mx-datepicker {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}

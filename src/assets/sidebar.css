@@ -1,0 +1,37 @@
+ul.menu{
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0px !important;
+}
+
+ul.menu > li{
+	padding: 10px 15px;
+	
+}
+
+ul.menu > li:hover{
+	background: #297ed3;
+}
+
+ul > li a,
+ul > li a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+.sub-menu{
+	background-color: #297ed3;
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0px !important;
+}
+
+.sub-menu > li{
+	padding: 10px 0px;
+	color: #fff;
+	padding-left:30px;
+}
+
+li{
+	cursor: pointer;
+}
